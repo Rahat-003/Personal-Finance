@@ -2,6 +2,13 @@ import globals from "globals";
 import pluginJs from "@eslint/js";
 
 export default [
-    { languageOptions: { globals: globals.node } },
+    { files: ["**/*.{js,mjs,cjs,jsx}"] },
+    { languageOptions: { globals: globals.browser } },
     pluginJs.configs.recommended,
+    pluginReact.configs.flat.recommended,
+    {
+        rules: {
+            "no-unused-vars": "off",
+        },
+    },
 ];
