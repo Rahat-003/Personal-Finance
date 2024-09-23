@@ -1,7 +1,7 @@
 import express from "express";
 import morgan from "morgan";
 import "dotenv/config";
-
+import apiRoutes from "./../routes/api.js";
 const app = express();
 
 const port = process.env.PORT;
@@ -22,9 +22,7 @@ morgan.token("param", function (req, res, param) {
     return req.params[param];
 });
 
-app.get("/", async (req, res) => {
-    res.send(`Welcome to Personal-Finance`);
-});
+app.use("/", apiRoutes);
 
 app.listen(port, () => {
     console.log(`Server is running at port ${port}`);

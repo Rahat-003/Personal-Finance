@@ -1,2 +1,3 @@
 import "./src/config/server.js";
-import "./src/config/database.js";
+import "./combineSchema.js";
+import "./filterPrismaOutput.js";
