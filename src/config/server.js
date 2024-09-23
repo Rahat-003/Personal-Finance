@@ -3,6 +3,7 @@ import morgan from "morgan";
 import "dotenv/config";
 import apiRoutes from "./../routes/api.js";
 const app = express();
+app.use(express.json());
 
 const port = process.env.PORT;
 

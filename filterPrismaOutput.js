@@ -42,7 +42,7 @@ exec("node combineSchema.js", (error, stdout, stderr) => {
                     console.log("No generated output found.");
                 }
 
-                process.exit(0); // Successful generation
+                // process.exit(0); // Successful generation
             }
         );
     }
